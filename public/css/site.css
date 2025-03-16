@@ -1,0 +1,25 @@
+/* Webfont: iransans */
+@font-face {
+	font-family: 'iransnas';
+	
+	src:
+   url('../fonts/IRANSansXFaNum-Light.ttf') format('truetype'),
+   url('../fonts/IRANSansXFaNum-Bold.ttf') format('truetype'); /* Safari, Android, iOS */
+	font-weight: normal;
+	font-style: normal;
+	text-rendering: optimizeLegibility;
+	font-display: auto;
+}
+
+
+body{
+   font-family: 'iransnas';
+   font-size: 10pt !important;
+   font-weight: bold !important;
+ 
+}
+
+input::-webkit-input-placeholder {
+    font-size: 10pt;
+ 
+}
