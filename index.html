@@ -95,19 +95,34 @@
     </div>
 
     <!-- nav -->
+    <style>
+        #menu_top>li>ul {
+            display: none;
+        }
 
+        #menu_top>li>ul.active {
+            display: flex;
+        }
 
+        .submenu3 {
+            display: none;
+        }
+
+        .submenu3.active {
+            display: flex;
+        }
+    </style>
     <nav class="bg-white border-gray-200 shadow  " style="background: #f7f8fa;" dir="">
         <div id="mega-menu-full-image"
             class=" h-10 container m-auto items-center justify-between  w-full flex  order-1">
-            <ul class="flex w-full font-medium flex-row mt-0 relative">
-                <li>
+            <ul id="menu_top" class="flex w-full font-medium flex-row mt-0 relative">
+                <li data-time="1">
                     <a href="#"
-                        class="flex items-center gap-3 py-2 px-3 text-gray-900 border-b border-gray-100  hover:bg-transparent border-0 hover:text-blue-700 p-0   "
+                        class="flex cursor-pointer items-center gap-3 py-2 px-3 text-gray-900 border-b border-gray-100  hover:bg-transparent border-0 hover:text-blue-700 p-0   "
                         aria-current="page">
                         کالای دیجیتال
 
-                        <svg class="w-[12px] h-[12px] text-gray-800 dark:text-white" aria-hidden="true"
+                        <svg class="w-[12px] h-[12px] text-gray-800 " aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="m19 9-7 7-7-7" />
@@ -115,12 +130,12 @@
                     </a>
 
                     <ul class="flex w-full font-medium flex-row mt-0 absolute bg-white left-0">
-                        <li>
+                        <li data-time="12">
                             <a href="#"
-                                class="flex items-center gap-3    py-2 px-3 text-gray-900 border-b border-gray-100  hover:bg-transparent border-0 hover:text-blue-700 p-0   "
+                                class="flex items-center gap-3  cursor-pointer   py-2 px-3 text-gray-900 border-b border-gray-100  hover:bg-transparent border-0 hover:text-blue-700 p-0   "
                                 aria-current="page">
                                 موبایل
-                                <svg class="w-[12px] h-[12px] text-gray-800 dark:text-white" aria-hidden="true"
+                                <svg class="w-[12px] h-[12px] text-gray-800 " aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
                                     viewBox="0 0 24 24">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -129,10 +144,9 @@
 
                             </a>
 
-
-                            
-                            <div id="mega-menu-full-image-dropdown"
-                                class=" container m-auto right-0 absolute bg-white border-gray-200 shadow-xs border-y ">
+                            <!-- submenu3 -->
+                            <div
+                                class=" submenu3 container m-auto right-0 absolute bg-white border-gray-200 shadow-xs border-y ">
                                 <div
                                     class="grid max-w-screen-xl px-4 py-5 mx-auto text-sm text-gray-500  md:grid-cols-3 md:px-6">
                                     <ul class="hidden mb-4 space-y-4 md:mb-0 md:block"
@@ -149,7 +163,7 @@
                                         </li>
                                         <li>
                                             <a href="#" class="hover:underline hover:text-blue-600 ">
-                                            samsung
+                                                samsung
                                             </a>
                                         </li>
                                         <li>
@@ -199,16 +213,11 @@
                                     </a>
                                 </div>
                             </div>
-
-
-
-
-
                         </li>
 
-                        <li>
+                        <li data-time="13">
                             <a href="#"
-                                class="flex items-center gap-3    py-2 px-1 text-gray-900 border-b border-gray-100  hover:bg-transparent border-0 hover:text-blue-700 p-0   "
+                                class="flex items-center gap-3  cursor-pointer   py-2 px-1 text-gray-900 border-b border-gray-100  hover:bg-transparent border-0 hover:text-blue-700 p-0   "
                                 aria-current="page">
                                 تبلت و کتاب خوان
                                 <svg class="w-[12px] h-[12px] text-gray-800 dark:text-white" aria-hidden="true"
@@ -219,21 +228,13 @@
                                 </svg>
 
                             </a>
-
-
-
-
                         </li>
-
-
                     </ul>
-
-
                 </li>
 
-                <li>
+                <li data-time="2">
                     <a href="#"
-                        class="flex items-center gap-3    py-2 px-1 text-gray-900 border-b border-gray-100  hover:bg-transparent border-0 hover:text-blue-700 p-0   "
+                        class="flex items-center gap-3  cursor-pointer   py-2 px-1 text-gray-900 border-b border-gray-100  hover:bg-transparent border-0 hover:text-blue-700 p-0   "
                         aria-current="page">
                         لوازم خانگی برقی
 
@@ -242,15 +243,114 @@
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="m19 9-7 7-7-7" />
                         </svg>
-
                     </a>
 
 
+                    <ul class="flex w-full font-medium flex-row mt-0 absolute bg-white left-0">
+                        <li data-time="21">
+                            <a href="#"
+                                class="flex items-center gap-3  cursor-pointer   py-2 px-3 text-gray-900 border-b border-gray-100  hover:bg-transparent border-0 hover:text-blue-700 p-0   "
+                                aria-current="page">
+                                صوتی وتصویری
+                                <svg class="w-[12px] h-[12px] text-gray-800 " aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                    viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m19 9-7 7-7-7" />
+                                </svg>
+
+                            </a>
+
+                            <!-- submenu3 -->
+                            <div
+                                class=" submenu3 container m-auto right-0 absolute bg-white border-gray-200 shadow-xs border-y ">
+                                <div
+                                    class="grid max-w-screen-xl px-4 py-5 mx-auto text-sm text-gray-500  md:grid-cols-3 md:px-6">
+                                    <ul class="hidden mb-4 space-y-4 md:mb-0 md:block"
+                                        aria-labelledby="mega-menu-full-image-button">
+                                        <li>
+                                            <a href="#" class="hover:underline hover:text-blue-600 ">
+                                                گوشی موبایل
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="hover:underline hover:text-blue-600 ">
+                                                apple
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="hover:underline hover:text-blue-600 ">
+                                                samsung
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="hover:underline hover:text-blue-600 ">
+                                                Online Stores
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="mb-4 space-y-4 md:mb-0">
+                                        <li>
+                                            <a href="#" class="hover:underline hover:text-blue-600 ">
+                                                Our Blog
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="hover:underline hover:text-blue-600 ">
+                                                Terms & Conditions
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="hover:underline hover:text-blue-600 ">
+                                                License
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="hover:underline hover:text-blue-600 ">
+                                                Resources
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <a href="#"
+                                        class="p-8 bg-local bg-gray-500 bg-center bg-no-repeat bg-cover rounded-lg bg-blend-multiply hover:bg-blend-soft-light "
+                                        style="background-image: url(/docs/images/dashboard-overview.png)">
+                                        <p class="max-w-xl mb-5 font-extrabold leading-tight tracking-tight text-white">
+                                            Preview the new
+                                            Flowbite dashboard navigation.</p>
+                                        <button type="button"
+                                            class="inline-flex items-center px-2.5 py-1.5 text-xs font-medium text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700">
+                                            Get started
+                                            <svg class="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                                <path stroke="currentColor" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="2"
+                                                    d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                            </svg>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li data-time="22">
+                            <a href="#"
+                                class="flex items-center gap-3  cursor-pointer   py-2 px-1 text-gray-900 border-b border-gray-100  hover:bg-transparent border-0 hover:text-blue-700 p-0   "
+                                aria-current="page">
+                                لوازم خانگی برقی
+                                <svg class="w-[12px] h-[12px] text-gray-800 dark:text-white" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                    viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m19 9-7 7-7-7" />
+                                </svg>
+
+                            </a>
+                        </li>
+                    </ul>
+
+
+
                 </li>
-
-
-
-
             </ul>
         </div>
 
@@ -258,9 +358,130 @@
     </nav>
 
 
+    <!-- main -->
+    <div id="main" class="container m-auto">
+        <div id="banerTop" class="w-full my-3">
+            <img class="w-full" src="./public/images/banner.jpg" width="" height="" alt="" srcset="">
+        </div>
+
+        <div id="main_content" class="flex space-x-2 ">
+            <div id="sideBarLeft" class="h-96 w-3/12 space-y-3">
+                <div id="brandSideBarLeft">
+                    <img class="shadow-md rouded rounded" src="./public/images/Euro2016-290.52.jpg" width="456px"
+                        alt="">
+                </div>
+
+                <ul id="digikala_tv" class="space-y-3">
+                    <li>
+                        <a href="#" >
+                            <img  class="shadow-md rouded rounded " src="./public/images/TV_100_Innovative_Products.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" >
+                            <img  class="shadow-md  rounded " src="./public/images/Motorola_Moto_360_1_Min_Intro.jpg" alt="">
+                        </a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li class="h-60">
+                        <a href="#">    
+                            <img class=" shadow-md h-full rounded" src="./public/images/li1.jpg" alt="">
+                        </a>
+                    </li>
+                    <li class="h-60">
+                        <a href="#">    
+                            <img class=" shadow-md h-full rounded" src="./public/images/li2.jpg" alt="">
+                        </a>
+                    </li>
+                    <li class="h-60">
+                        <a href="#">    
+                            <img class=" shadow-md h-full rounded" src="./public/images/li3.jpg" alt="">
+                        </a>
+                    </li>
+                </ul>
+
+                <div id="last_news_sidebar" class="rounded shadow overflow-hidden bg-white " >
+                    <h3 class="bg-gray-100 p-2 text-gray-600  py-3 ">تازه ترین خبرها</h3>
+                    <ul>
+                        <li>
+                            <a href="#" class="flex gap-2.5 text-gray-500 p-2 items-center">
+                                <div id="col-right">
+                                    <img class="rounded-4xl" src="/public/images/SanDisk_Headquarters_Milpitas-60x60.jpg" alt="">
+                                </div>
+                                <div id="col-left">
+                                    <p>کارت حافظه 256 گیگابایتی سن دیسک</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div id="contentSite" class="h-96 w-9/12">
+                <div id="slider">
+                    <div id="slider_img" >
+                               
+                        <a href="#" class="rounded overflow-hidden shadow  block ">
+                            <img  class="w-full h-full" src="./public/images/slider1.jpg"  alt="">
+                        </a>
+
+                    </div>
+                    <div id="slider_navigator">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+
+
 
     <script src="./public/js/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+    <script>
+        // دستورات مربوط به منو
+        var timer = {};
+        $("#menu_top li").hover(function () {
+            // over
+            var tag = $(this);
+            var timerAttr = tag.attr('data-time')
+            clearTimeout(timer[timerAttr])
+            timer[timerAttr] = setTimeout(() => {
+                $('>ul ', tag).addClass('active');
+                $('>.submenu3 ', tag).addClass('active');
+            }, 200);
+        }, function () {
+            // out
+            var tag = $(this);
+            var timerAttr = tag.attr('data-time')
+            clearTimeout(timer[timerAttr])
+            timer[timerAttr] = setTimeout(() => {
+                $('>ul ', tag).removeClass('active');
+                $('>.submenu3 ', tag).removeClass('active');
+            }, 200);
+        }
+        );
+
+
+    </script>
 </body>
 
 </html>
