@@ -4,9 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- css links -->
     <link rel="stylesheet" href="./output.css">
     <link rel="stylesheet" href="./public/css/site.css">
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+
+
+    <!-- js links -->
+
+    <script src="./public/js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+
 
     <title>
         فروشگاه اینترنتی دیجی کالا
@@ -373,42 +383,45 @@
 
                 <ul id="digikala_tv" class="space-y-3">
                     <li>
-                        <a href="#" >
-                            <img  class="shadow-md rouded rounded " src="./public/images/TV_100_Innovative_Products.jpg" alt="">
+                        <a href="#">
+                            <img class="shadow-md rouded rounded " src="./public/images/TV_100_Innovative_Products.jpg"
+                                alt="">
                         </a>
                     </li>
                     <li>
-                        <a href="#" >
-                            <img  class="shadow-md  rounded " src="./public/images/Motorola_Moto_360_1_Min_Intro.jpg" alt="">
+                        <a href="#">
+                            <img class="shadow-md  rounded " src="./public/images/Motorola_Moto_360_1_Min_Intro.jpg"
+                                alt="">
                         </a>
                     </li>
                 </ul>
 
                 <ul>
                     <li class="h-60">
-                        <a href="#">    
+                        <a href="#">
                             <img class=" shadow-md h-full rounded" src="./public/images/li1.jpg" alt="">
                         </a>
                     </li>
                     <li class="h-60">
-                        <a href="#">    
+                        <a href="#">
                             <img class=" shadow-md h-full rounded" src="./public/images/li2.jpg" alt="">
                         </a>
                     </li>
                     <li class="h-60">
-                        <a href="#">    
+                        <a href="#">
                             <img class=" shadow-md h-full rounded" src="./public/images/li3.jpg" alt="">
                         </a>
                     </li>
                 </ul>
 
-                <div id="last_news_sidebar" class="rounded shadow overflow-hidden bg-white " >
+                <div id="last_news_sidebar" class="rounded shadow overflow-hidden bg-white ">
                     <h3 class="bg-gray-100 p-2 text-gray-600  py-3 ">تازه ترین خبرها</h3>
                     <ul>
                         <li>
                             <a href="#" class="flex gap-2.5 text-gray-500 p-2 items-center">
                                 <div id="col-right">
-                                    <img class="rounded-4xl" src="/public/images/SanDisk_Headquarters_Milpitas-60x60.jpg" alt="">
+                                    <img class="rounded-4xl"
+                                        src="/public/images/SanDisk_Headquarters_Milpitas-60x60.jpg" alt="">
                                 </div>
                                 <div id="col-left">
                                     <p>کارت حافظه 256 گیگابایتی سن دیسک</p>
@@ -419,42 +432,97 @@
                 </div>
 
             </div>
+            <style>
+                #slider .item {
+                    display: none;
+                }
+            </style>
             <div id="contentSite" class="h-96 w-9/12">
                 <div id="slider">
-                    <div id="slider_img" >
-                               
-                        <a href="#" class="rounded overflow-hidden shadow  block ">
-                            <img  class="w-full h-full" src="./public/images/slider1.jpg"  alt="">
+                    <div id="slider_img" class="relative">
+                        <span id="prev" class=" z-10 absolute cursor-pointer right-0 top-32">
+                            <svg fill="#000000" height="20px" width="20px" version="1.1" id="Layer_1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                viewBox="0 0 512.006 512.006" xml:space="preserve"
+                                transform="matrix(1, 0, 0, -1, 0, 0)rotate(180)">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <g>
+                                        <g>
+                                            <path
+                                                d="M388.419,475.59L168.834,256.005L388.418,36.421c8.341-8.341,8.341-21.824,0-30.165s-21.824-8.341-30.165,0 L123.586,240.923c-8.341,8.341-8.341,21.824,0,30.165l234.667,234.667c4.16,4.16,9.621,6.251,15.083,6.251 c5.461,0,10.923-2.091,15.083-6.251C396.76,497.414,396.76,483.931,388.419,475.59z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+
+                        </span>
+                        <span id="next" class=" z-10 cursor-pointer  absolute left-0 top-32">
+                            <svg fill="#000000" height="20px" width="20px" version="1.1" id="Layer_1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                viewBox="0 0 512.006 512.006" xml:space="preserve">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <g>
+                                        <g>
+                                            <path
+                                                d="M388.419,475.59L168.834,256.005L388.418,36.421c8.341-8.341,8.341-21.824,0-30.165s-21.824-8.341-30.165,0 L123.586,240.923c-8.341,8.341-8.341,21.824,0,30.165l234.667,234.667c4.16,4.16,9.621,6.251,15.083,6.251 c5.461,0,10.923-2.091,15.083-6.251C396.76,497.414,396.76,483.931,388.419,475.59z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+
+                        </span>
+                        <a href="#" class=" item rounded overflow-hidden shadow  block ">
+                            <img class="w-full h-full" src="./public/images/slider1.jpg" alt="">
+                        </a>
+                        <a href="#" class=" item rounded overflow-hidden shadow  block ">
+                            <img class="w-full h-full" src="./public/images/slider2.jpg" alt="">
+                        </a>
+                        <a href="#" class=" item rounded overflow-hidden shadow  block ">
+                            <img class="w-full h-full" src="./public/images/slider3.jpg" alt="">
+                        </a>
+                        <a href="#" class=" item rounded overflow-hidden shadow  block ">
+                            <img class="w-full h-full" src="./public/images/slider4.jpg" alt="">
                         </a>
 
                     </div>
                     <div id="slider_navigator">
+                        <ul class="flex gap-2 bg-gray-500  ">
+                            <li class="py-3.5 px-1.5 text-white w-1/4">
+                                <a href="#" class="">
+                                    محصولات کالای خواب
+                                </a>
+                            </li>
+                            <li class="py-3.5 px-1.5 text-white w-1/4">
+                                <a href="#" class="">
+                                    لوازم خانگی وایو
+                                </a>
+                            </li>
+                            <li class="py-3.5 px-1.5 text-white w-1/4">
+                                <a href="#" class="">
+                                    سری جدید موبایل </a>
+                            </li>
+                            <li class="py-3.5 px-1.5 text-white w-1/4">
+                                <a href="#" class="">
+                                    کتب معنوی
+                                </a>
+                            </li>
 
+                        </ul>
                     </div>
                 </div>
+
+
             </div>
         </div>
 
     </div>
 
-
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-
-
-
-
-    <script src="./public/js/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 
     <script>
         // دستورات مربوط به منو
@@ -480,6 +548,52 @@
         }
         );
 
+
+        //دستورات مربوط به اسلایدر اصلی 
+        var sliderTag = $("#slider");
+        var sliderItems = sliderTag.find('.item');
+        var numItems = sliderItems.length;
+        var nextSlide = 1;
+        function slider() {
+            if (nextSlide > numItems) {
+                nextSlide = 1;
+            }
+            if (nextSlide < 1) {
+                nextSlide = numItems
+            }
+            sliderItems.hide();
+            sliderItems.eq(nextSlide - 1).fadeIn();
+            nextSlide++;
+        }
+
+        
+        function goToNext() {
+            slider()
+        }
+
+        $('#slider #next').click(function (e) {
+            goToNext();
+        });
+        function goToPrev() {
+            nextSlide = nextSlide - 2;
+            slider()
+        }
+
+        $('#slider #prev').click(function (e) {
+            goToPrev();
+        });
+
+        function goToSlide(index) {
+            nextSlide = index;
+            slider()
+        }
+        $('#slider #slider_navigator li ').click(function (e) { 
+            var index = $(this).index();
+            goToSlide(index)
+            
+        });
+
+      
 
     </script>
 </body>
