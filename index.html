@@ -526,6 +526,27 @@
                 </div>
 
 
+                <div id="searvicesFetures" class="my-2.5 bg-white">
+                    <ul class="rounded shadow overflow-hidden flex">
+                        <li class="py-4 w-1/4">
+
+                            <a href="#" class="px-2">7روز ضمانت بازگشت</a>
+                        </li>
+                        <li class="py-4 w-1/4">
+
+                            <a href="#" class="px-2">پرداخت در محل </a>
+                        </li>
+                        <li class="py-4 w-1/4">
+
+                            <a href="#" class="px-2">ضمانت اصل بودن کالا </a>
+                        </li>
+                        <li class="py-4 w-1/4">
+
+                            <a href="#" class="px-2">تحویل اکسپرس </a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </div>
 
@@ -584,7 +605,7 @@
         var sliderInterval = setInterval(slider, timeOut);
 
         sliderTag.mouseleave(function () { 
-            sliderInterval = setInterval(slider, timeOut);
+            sliderInterval = clearInterval(sliderInterval);
             setInterval(slider, timeOut);
          })
         
@@ -593,8 +614,9 @@
         }
 
         $('#slider #next').click(function (e) {
-            goToNext();
             clearInterval(sliderInterval)
+            goToNext();
+           
         });
         function goToPrev() {
             nextSlide = nextSlide - 2;
@@ -602,8 +624,8 @@
         }
 
         $('#slider #prev').click(function (e) {
-            goToPrev();
             clearInterval(sliderInterval)
+            goToPrev();
         });
 
         function goToSlide(index) {
@@ -612,9 +634,9 @@
         }
         $('#slider #slider_navigator li ').click(function (e) { 
             var index = $(this).index();
-            goToSlide(index+1)
+           
             clearInterval(sliderInterval)
-            
+            goToSlide(index+1)
         });
 
       
