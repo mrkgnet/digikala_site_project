@@ -432,9 +432,15 @@
                 </div>
 
             </div>
+
+            <!-- slider -->
             <style>
                 #slider .item {
                     display: none;
+                }
+                #slider #slider_navigator ul li.active  {
+                background-color: white;
+                color: black;
                 }
             </style>
             <div id="contentSite" class="h-96 w-9/12">
@@ -491,9 +497,11 @@
                         </a>
 
                     </div>
+
+                    <!-- slider navigator  -->
                     <div id="slider_navigator">
                         <ul class="flex gap-2 bg-gray-500  ">
-                            <li class="py-3.5 px-1.5 text-white w-1/4">
+                            <li class="py-3.5 px-1.5 text-white w-1/4 ">
                                 <a href="#" class="">
                                     محصولات کالای خواب
                                 </a>
@@ -553,6 +561,11 @@
         var sliderItems = sliderTag.find('.item');
         var numItems = sliderItems.length;
         var nextSlide = 1;
+
+        var sliderNavigators = sliderTag.find('#slider_navigator ul li'); 
+        var timeOut = 5000; 
+
+
         function slider() {
             if (nextSlide > numItems) {
                 nextSlide = 1;
@@ -562,9 +575,18 @@
             }
             sliderItems.hide();
             sliderItems.eq(nextSlide - 1).fadeIn();
+            sliderNavigators.removeClass("active")
+            sliderNavigators.eq(nextSlide -1 ).addClass("active");
             nextSlide++;
         }
 
+        slider()
+        var sliderInterval = setInterval(slider, timeOut);
+
+        sliderTag.mouseleave(function () { 
+            sliderInterval = setInterval(slider, timeOut);
+            setInterval(slider, timeOut);
+         })
         
         function goToNext() {
             slider()
@@ -572,6 +594,7 @@
 
         $('#slider #next').click(function (e) {
             goToNext();
+            clearInterval(sliderInterval)
         });
         function goToPrev() {
             nextSlide = nextSlide - 2;
@@ -580,6 +603,7 @@
 
         $('#slider #prev').click(function (e) {
             goToPrev();
+            clearInterval(sliderInterval)
         });
 
         function goToSlide(index) {
@@ -589,6 +613,7 @@
         $('#slider #slider_navigator li ').click(function (e) { 
             var index = $(this).index();
             goToSlide(index+1)
+            clearInterval(sliderInterval)
             
         });
 
