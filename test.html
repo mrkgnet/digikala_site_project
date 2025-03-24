@@ -1,67 +1,42 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <title>Swiper demo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-
-  <style>
-    html,
-    body {
-      position: relative;
-      height: 100%;
-    }
-
-    body {
-      background: #eee;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color: #000;
-      margin: 0;
-      padding: 0;
-    }
-
-    swiper-container {
-      width: 50%;
-      height: 50%;
-    }
-
-    swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./public/css/flipTimer.css">
+  <script src="./public/js/jquery.min.js"></script>
+  <script src="./public/js/jquery.flipTimer.js"></script>
+  <title>Document</title>
 </head>
 
 <body>
+  <div class="flipTimer">
+    <div class="days"></div>
+    <div class="hours"></div>
+    <div class="minutes"></div>
+    <div class="seconds"></div>
+  </div>
 
-    
-  <swiper-container class="mySwiper" navigation="true" pagination="true" keyboard="true" mousewheel="true"
-    css-mode="true">
-    <swiper-slide>Slide 1</swiper-slide>
-    <swiper-slide>Slide 2</swiper-slide>
-    <swiper-slide>Slide 3</swiper-slide>
-    <swiper-slide>Slide 4</swiper-slide>
-    <swiper-slide>Slide 5</swiper-slide>
-    <swiper-slide>Slide 6</swiper-slide>
-    <swiper-slide>Slide 7</swiper-slide>
-    <swiper-slide>Slide 8</swiper-slide>
-    <swiper-slide>Slide 9</swiper-slide>
-  </swiper-container>
+  <script>
+    $(document).ready(function () {
+      $('.flipTimer').flipTimer({
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+        // count up or countdown
+        direction: 'down',
+
+        // the target <a href="https://www.jqueryscript.net/time-clock/">date</a>
+        date: 'March 26, 2025 08:30:30',
+
+        // callback works only with direction = "down"
+        callback: function () { alert('times up!'); }
+
+      });
+    });
+  </script>
+
+
+
 
 </body>
 

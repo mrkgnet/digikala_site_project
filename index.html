@@ -9,14 +9,13 @@
     <link rel="stylesheet" href="./output.css">
     <link rel="stylesheet" href="./public/css/site.css">
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
-
+    <link rel="stylesheet" href="./public/css/flipTimer.css">
 
     <!-- js links -->
 
     <script src="./public/js/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-
-
+    <script src="./public/js/jquery.flipTimer.js"></script>
 
     <title>
         فروشگاه اینترنتی دیجی کالا
@@ -1174,12 +1173,20 @@
                 </div>
 
 
-                <div id="slider2" class="flex w-full  bg-white shadow rounded overflow-hidden ">
+                <div id="slider2" class="flex w-full  bg-white shadow rounded overflow-hidden relative ">
+                    <div class="flipTimer scale-[0.2] absolute bottom-0 top-64 left-0.5 " dir="ltr" >
+                        <div class="days"></div>
+                        <div class="hours"></div>
+                        <div class="minutes"></div>
+                        <div class="seconds"></div>
+                    </div>
+
                     <div id="slider2_content"
                         class="w-9/12 border-l border-gray-200 bg-[url(./public/images/slider2_bg.jpg)]  ">
+
                         <a href="#" class="flex gap-1 p-8 ">
                             <div id="slider2_content_right " class="w-1/2 flex flex-col gap-1 ">
-                                <h3 class="titlePrice text-red-500" >
+                                <h3 class="titlePrice text-red-500">
                                     جشنواره ماه نو
                                 </h3>
 
@@ -1188,25 +1195,25 @@
                                         69هزار
                                     </p>
                                     <p class="priceOld w-2/3 bg-red-600 text-white border  py-1 px-2.5 shadow">
-                                       39هزار
+                                        39هزار
                                     </p>
-                                   
+
                                 </div>
                                 <div class="priceDetails mt-3 ">
                                     <ul class="space-y-3">
                                         <li>
                                             <p>
-                                                توان 2.5 وات 
+                                                توان 2.5 وات
                                             </p>
                                         </li>
                                         <li>
                                             <p>
-مقاوم در برابر ضربه
+                                                مقاوم در برابر ضربه
                                             </p>
                                         </li>
                                         <li>
                                             <p>
-مقاوم در برابر ضربه
+                                                مقاوم در برابر ضربه
                                             </p>
                                         </li>
                                     </ul>
@@ -1222,6 +1229,8 @@
                             </div>
                         </a>
                     </div>
+
+
                     <div id="slider2_navigator" class="w-3/12 bg-gray-100">
                         <ul class="flex flex-col items-center gap-1.5">
                             <li
@@ -1375,6 +1384,24 @@
             goToSlide(index + 1)
         });
 
+
+        // دستورات مربوط به تایمر
+
+
+        $(document).ready(function () {
+            $('.flipTimer').flipTimer({
+
+                // count up or countdown
+                direction: 'down',
+
+                // the target <a href="https://www.jqueryscript.net/time-clock/">date</a>
+                date: 'March 26, 2025 08:30:30',
+
+                // callback works only with direction = "down"
+                callback: function () { alert('times up!'); }
+
+            });
+        });
 
 
     </script>
